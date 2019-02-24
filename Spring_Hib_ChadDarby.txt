@@ -22,3 +22,15 @@ OR, you can update them via .createQuery() in the database itself
 db operation: CASCADE 
 deletes an entry and it's entries in foreign keys, DEPENDS ON USE CASE (don't want to delete course if a student is deleted)
 -----
+Hibernate Mappings 
+
+Cascading: Allows us to propagate entity state changes from Parents to Childs entities
+  - types: DETACH, MERGE, PERSIST, REFRESH, REMOVE, ALL, orphanRemoval
+
+@GeneratedValue specifies that a value will be automatically generated for that field
+
+GenerationType : defines the types of primary key generation strategies
+GenerationType.IDENTITY indicates that a PERSISTENCE provider must assign primary keys for the entity using the DB's ID column
+
+Bi-directional mapping
+
