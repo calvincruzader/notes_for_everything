@@ -24,6 +24,8 @@ deletes an entry and it's entries in foreign keys, DEPENDS ON USE CASE (don't wa
 -----
 Hibernate Mappings 
 
+Summary of Activity: Learned how to do JPA/Hibernate of one-to-many/many-to-one mappings
+
 Cascading: Allows us to propagate entity state changes from Parents to Childs entities
   - types: DETACH, MERGE, PERSIST, REFRESH, REMOVE, ALL, orphanRemoval
 
@@ -32,5 +34,10 @@ Cascading: Allows us to propagate entity state changes from Parents to Childs en
 GenerationType : defines the types of primary key generation strategies
 GenerationType.IDENTITY indicates that a PERSISTENCE provider must assign primary keys for the entity using the DB's ID column
 
-Bi-directional mapping
+OneToMany/ManyToOne nuances:  
+  - @JoinColumn: indicates that this entity is the owner of the relationship (and has a foreign key to the referenced table)
+    - @JoinColumn(name='JobId')
+  - mappedBy: an inverse of the indication above; that is, the owner of the relationship is the other entity
+    - @OneToMany(mappedBy='<field name in the other entity>')
+    - @OneToMany(mappedBy='instructor')
 
