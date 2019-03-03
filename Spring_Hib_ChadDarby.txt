@@ -41,3 +41,5 @@ OneToMany/ManyToOne nuances:
     - @OneToMany(mappedBy='<field name in the other entity>')
     - @OneToMany(mappedBy='instructor')
 
+Lazy Loading vs Easy Loading 
+
