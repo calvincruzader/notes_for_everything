@@ -41,5 +41,15 @@ OneToMany/ManyToOne nuances:
     - @OneToMany(mappedBy='<field name in the other entity>')
     - @OneToMany(mappedBy='instructor')
 
-Lazy Loading vs Eager Loading 
+Fetch types:
+Lazy Loading vs Eager Loading
+When we fetch/retrieve data, should we retrieve EVERYTHING?
+Eager loading: retrieve everything 
+Lazy loading: only retrieve upon request 
+best practice - only load data when absolutely needed! prefer lazy loading > eager loading
+
+Lazy loading: 
+	- load the main entity first 
+	- then load dependent entities on demand
+		- caveat to this is that it requires a Hibernate session to remain open. If an H session is closed, then H will throw an exception
 
